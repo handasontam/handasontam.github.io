@@ -1,10 +1,9 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Blog - Handason's blog</title>
-<meta name="description" content="Handason's Blog
-">
-<link rel="canonical" href="/"><link rel="alternate" type="application/rss+xml" title="Handason's blog" href="/feed.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>A New Blog! - Handason's blog</title>
+<meta name="description" content="Math equation using KaTeX!Code Snippet!!def set_seed(x):  """Set seed for both NumPy and TensorFlow.  Parameters  ----------  x : int, float    seed  """  np...">
+<link rel="canonical" href="/2018/06/21/just-a-test.html"><link rel="alternate" type="application/rss+xml" title="Handason's blog" href="/feed.xml">
 
 <!-- begin favicon --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
@@ -244,7 +243,7 @@
     window.TEXT_VARIABLES = TEXT_VARIABLES;
   })();
 </script></head>
-  <body><div class="layout--page clearfix"><div class="page__main js-page-main"><div class="page__main-inner">
+  <body><div class="layout--page clearfix"><div class="page__main js-page-main has-aside"><div class="page__main-inner">
     <div></div><div class="page__header"><header class="header">
   <div class="main clearfix">
     <div class="logo"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -259,13 +258,16 @@
       <ul><li><a href="/archive.html">Archive</a></li><li><a href="/about.html">About</a></li></ul>
     </nav></div>
 </header>
-</div><div class="page__content"><div class ="main"><div class="col-2 js-col-2"></div>
+</div><div class="page__content"><div class ="main"><div class="col-2 js-col-2"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
           <div class="col-1">
-            <article><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Handason"/></meta></div>
-<div class="js-article-content"><div class="layout--home">
-  <div class="post-list"><article><h1><a href="/2018/06/21/just-a-test.html">A New Blog!</a></h1>
-        <div class="article-content"><p>Math equation using KaTeX!</p>
+            <article><div class="main__title"><h1>A New Blog!</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Handason"/></meta><ul class="article-info__right-col menu"><li class="publish-date"><time datetime="2018-06-21T00:00:00+08:00"
+              itemprop="datePublished">Jun 21, 2018
+            </time></li>
+      </ul></div>
+<div class="js-article-content"><div class="layout--article">
+
+  <div class="article-content" itemprop="articleBody"><p>Math equation using KaTeX!</p>
 
 <script type="math/tex; mode=display">E(w_i,c_k,z) = -\sum_{j=1}^z w_{i,j} c_{k,j} + \Big[z\log a -\sum_{j=1}^z (w_{i,j}^2 +  c_{k,j}^2)\Big].</script>
 
@@ -284,13 +286,40 @@
 </code></pre></div></div>
 
 <p><a href="https://jekyllrb.com/">Jekyll</a>.</p>
-</div><a href="/2018/06/21/just-a-test.html">Click to read more ...</a><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Handason"/></meta><ul class="article-info__right-col menu"><li class="publish-date"><span>Jun 21, 2018</span></li>
-      </ul></div>
-</article></div></div>
+</div>
 
-<script>/*(function () {
+  <footer class="article-footer"><meta itemprop="dateModified" content="2018-06-21T00:00:00+08:00"><div class="article-license"><div class="license card"><div class="clearfix"><a class="octocat" href="https://github.com/handasontam/handasontam.github.io/tree/master/_posts/2018-06-21-just-a-test.md">
+        <img alt="View on Github" src="/assets/images/octocat.jpg" />
+      </a><p><a href="https://github.com/handasontam/handasontam.github.io/tree/master/_posts/2018-06-21-just-a-test.md">View this POST on Github.</a></p><p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> license.</p><a class="license-img" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+      <img alt="Creative Commons License" src="/assets/images/license-cc4.png" />
+    </a><p></p>
+  </div>
+</div></div></footer></div>
 
-})();*/</script></div></article>
+<script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    $(function() {
+      var $this ,$scroll;
+      var $articleContent = $('.js-article-content');
+      var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+      var scroll = hasSidebar ? '.js-page-main' : 'html, body';
+      $scroll = $(scroll);
+
+      $articleContent.find('.highlight').each(function() {
+        $this = $(this);
+        $this.attr('data-lang', $this.find('code').attr('data-lang'));
+      });
+      $articleContent.find('h1, h2, h3, h4, h5, h6').each(function() {
+        $this = $(this);
+        $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
+      });
+      $articleContent.on('click', '.anchor', function() {
+        $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
+      });
+    });
+  });
+})();</script></div></article>
           </div></div></div>
 
       <div class="page__footer">
@@ -550,5 +579,67 @@
   });
 })();/*(function () {
 
-})();*/</script></body>
+})();*/</script><script>
+  /* toc must before affix, since affix need to konw toc' height. */(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window);
+    var $articleContent = $('.js-article-content');
+    var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-2');
+    var toc;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+    var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
+
+    function disabled() {
+      return $col2.css('display') === 'none' || !hasToc;
+    }
+
+    tocDisabled = disabled();
+
+    setTimeout(function() {
+      toc = $tocRoot.toc({
+        selectors: TOC_SELECTOR,
+        container: $articleContent,
+        scrollTarget: hasSidebar ? '.js-page-main' : null,
+        scroller: hasSidebar ? '.js-page-main' : null,
+        disabled: tocDisabled
+      });
+    }, 1000);
+
+    $window.on('resize', window.throttle(function() {
+      tocDisabled = disabled();
+      toc && toc.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+  });
+})();(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $pageFooter = $('.js-page-footer');
+    var $pageAside = $('.js-page-aside');
+    var affix;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+
+    setTimeout(function() {
+      affix = $pageAside.affix({
+        offsetBottom: $pageFooter.outerHeight(),
+        scrollTarget: hasSidebar ? '.js-page-main' : null,
+        scroller: hasSidebar ? '.js-page-main' : null,
+        scroll: hasSidebar ? $('.js-page-main').children() : null,
+        disabled: tocDisabled
+      });
+    }, 1000);
+
+    $window.on('resize', window.throttle(function() {
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+  });
+})();</script></body>
 </html>
