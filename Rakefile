@@ -68,3 +68,4 @@ end
 desc "Commit and deploy _site/"
 task :default => [:commit, :deploy] do
 end
+
