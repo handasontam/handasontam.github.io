@@ -2,6 +2,7 @@
 <div class="footer js-page-footer">
   <div class="main">
     <aside> {%- include follow-me.html -%} </aside>
+    <script src="{{ "/assets/js/katex_init.js" | prepend: site.baseurl }}"></script>
     <footer class="site-info">
       {%- assign __path = site.paths.rss | default: site.data.variables.default.paths.rss -%}
       {%- include snippets/get-nav-url.html -%}

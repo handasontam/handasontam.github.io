@@ -1,5 +1,10 @@
 source 'https://rubygems.org/'
 
+gem 'rouge'
+gem 'jekyll'
+gem 'jekyll-scholar'
+gem 'csl-styles'
+gem 'unicode'
 gemspec
 
 # For dev under windows, I know that yikes....

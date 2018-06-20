@@ -41,3 +41,7 @@
 {%- include snippets/get-sources.html -%}
 {%- assign _sources = __return -%}
 <link rel="stylesheet" href="{{ _sources.font_awesome }}" >
+<link rel="stylesheet" href="{{ _sources.katex.css }}" integrity=" {{
+_sources.katex.css_integrity }}" crossorigin="anonymous">
+<script src="{{ _sources.katex.js }}" integrity="{{ _sources.katex.js_integrity
+}}" crossorigin="anonymous"></script>

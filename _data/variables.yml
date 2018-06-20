@@ -30,6 +30,11 @@ sources:
       css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
     mathjax: 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
     mermaid: 'https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js'
+    katex:
+      js: 'https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js'
+      js_integrity: 'sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm'
+      css: 'https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css'
+      css_integrity: 'sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH'
   unpkg:
     font_awesome: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css'
     jquery: 'https://unpkg.com/jquery@3.3.1/dist/jquery.min.js'

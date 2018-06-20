@@ -34,10 +34,10 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ##############################
 author:
   name: Handason
-  email: handasontam@somemail.com # your Email address e.g. someone@site.com
+  email: handasontam@gmail.com # your Email address e.g. someone@site.com
   facebook: # your Facebook username
   twitter: # your Twitter username
-  github: # your GitHub username
+  github: handasontam# your GitHub username
   linkedin: # your Linkedin username
   googleplus: # your Google+ username
   weibo: # your Weibo username
@@ -46,7 +46,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: someone/someone.github.io
+repository: handasontam/handasontam.github.io
 repository_tree: master
 
 
@@ -72,12 +72,14 @@ toc:
 mathjax: # false (default), true
 mathjax_autoNumber: # false (default), true
 
+# KaTex
+katex: true
+
 # Mermaid
 mermaid: # false (default), true
 
 # Chart
 chart: # false (default), true
-
 
 ## => Paginate
 ##############################
@@ -119,7 +121,7 @@ leancloud:
 ## => Analytics
 ##############################
 ## Google Analytics
-ga_tracking_id: # Google Analytics id for the site
+ga_tracking_id: UA-121118048-1 # Google Analytics id for the site
 ga_anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
@@ -165,3 +167,4 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+  - jekyll-scholar
