@@ -28,7 +28,7 @@ useful plugins like [jekyll-scholad](https://github.com/inukshuk/jekyll-scholar)
 
    A workaround is to build the site locally using ```jekyll build``` and push the resulting html (everything inside the **\_site** folder) to the master branch.
 
-   To Automate the whole process, I modified the Rakefile from [David Ensinger](http://davidensinger.com/2013/07/automating-jekyll-deployment-to-github-pages-with-rake/). You can see the modified script [here](https://github.com/handasontam/handasontam.github.io/blob/source/Rakefile). This command will run ```jekyll build``` on the **source** branch and copy the evrythin in the **_site** directory to the **master** branch and push everything to github
+   To Automate the whole process, I modified the Rakefile from [David Ensinger](http://davidensinger.com/2013/07/automating-jekyll-deployment-to-github-pages-with-rake/). You can see the modified script [here](https://github.com/handasontam/handasontam.github.io/blob/source/Rakefile). This command will run ```jekyll build``` on the **source** branch and copy everythin in the **_site** directory to the **master** branch and push everything to github
 
 ## Some Demo
 ### Math equation using KaTeX!
