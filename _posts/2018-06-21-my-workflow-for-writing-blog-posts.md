@@ -6,7 +6,7 @@ title: My workflow for writing blog posts
 ## Steps to write a post
 1. Switch to the **source** branch and write a new post with markdown format and save it in the **_posts** directory
 
-   ```
+   ```shell
    $ git checkout source
    ```
 
