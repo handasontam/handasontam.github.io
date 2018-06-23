@@ -8,6 +8,8 @@ title: My workflow for writing blog posts
 
    ```shell
    $ git checkout source
+   $ vim _posts/2018-06-23-a-new-post.md
+   # write a new blog post
    ```
 
 2. Test it locally
