@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-06-24T01:09:11+08:00</updated><id>/</id><title type="html">Handason’s blog</title><subtitle>Handason's Blog
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-06-24T01:59:04+08:00</updated><id>/</id><title type="html">Handason’s blog</title><subtitle>Handason's Blog
 </subtitle><author><name>Handason</name><email>handasontam@gmail.com</email></author><entry><title type="html">My workflow for writing blog posts</title><link href="/2018/06/21/my-workflow-for-writing-blog-posts.html" rel="alternate" type="text/html" title="My workflow for writing blog posts" /><published>2018-06-21T00:00:00+08:00</published><updated>2018-06-21T00:00:00+08:00</updated><id>/2018/06/21/my-workflow-for-writing-blog-posts</id><content type="html" xml:base="/2018/06/21/my-workflow-for-writing-blog-posts.html">&lt;h2 id=&quot;steps-to-write-a-post&quot;&gt;Steps to write a post&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;Switch to the &lt;strong&gt;source&lt;/strong&gt; branch and write a new post with markdown format and save it in the &lt;strong&gt;_posts&lt;/strong&gt; directory&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout source
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
