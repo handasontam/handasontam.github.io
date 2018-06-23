@@ -264,27 +264,65 @@
           <div class="col-1">
             <article><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Handason"/></meta></div>
 <div class="js-article-content"><div class="layout--home">
-  <div class="post-list"><article><h1><a href="/2018/06/21/just-a-test.html">A New Blog!</a></h1>
-        <div class="article-content"><p>Math equation using KaTeX!</p>
+  <div class="post-list"><article><h1><a href="/2018/06/21/my-workflow-for-writing-blog-posts.html">My workflow for writing blog posts</a></h1>
+        <div class="article-content"><h2 id="steps-to-write-a-post">Steps to write a post</h2>
+<ol>
+  <li>
+    <p>Switch to the <strong>source</strong> branch and write a new post with markdown format and save it in the <strong>_posts</strong> directory</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git checkout source
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Test it locally</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>jekyll build
+<span class="nv">$ </span>jekyll serve
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Push to github</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>rake
+</code></pre></div>    </div>
+
+    <p>As github page only support a few <a href="https://pages.github.com/versions/">whitelisted jekyll plugins</a> due to security reasons. Many
+useful plugins like <a href="https://github.com/inukshuk/jekyll-scholar">jekyll-scholad</a>, <a href="https://github.com/linjer/jekyll-katex">jekyll-katex</a> cannot be used.</p>
+
+    <p>A workaround is to build the site locally using <code class="highlighter-rouge">jekyll build</code> and push the resulting html (everything inside the <strong>_site</strong> folder) to the master branch.</p>
+
+    <p>To Automate the whole process, I modified the Rakefile from <a href="http://davidensinger.com/2013/07/automating-jekyll-deployment-to-github-pages-with-rake/">David Ensinger</a>. You can see the modified script <a href="https://github.com/handasontam/handasontam.github.io/blob/source/Rakefile">here</a>. This command will run <code class="highlighter-rouge">jekyll build</code> on the <strong>source</strong> branch and copy the evrythin in the <strong>_site</strong> directory to the <strong>master</strong> branch and push everything to github</p>
+  </li>
+</ol>
+
+<h2 id="some-demo">Some Demo</h2>
+<h3 id="math-equation-using-katex">Math equation using KaTeX!</h3>
 
 <script type="math/tex; mode=display">E(w_i,c_k,z) = -\sum_{j=1}^z w_{i,j} c_{k,j} + \Big[z\log a -\sum_{j=1}^z (w_{i,j}^2 +  c_{k,j}^2)\Big].</script>
 
-<p>Code Snippet!!</p>
+<h3 id="code-snippet">Code Snippet!</h3>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">set_seed</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-  <span class="s2">"""Set seed for both NumPy and TensorFlow.
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">set_seed</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="s">"""Set seed for both NumPy and TensorFlow.
 
   Parameters
   ----------
   x : int, float
     seed
   """</span>
-  <span class="n">np</span><span class="p">.</span><span class="nf">random</span><span class="p">.</span><span class="nf">seed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-  <span class="n">tf</span><span class="p">.</span><span class="nf">set_random_seed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="n">tf</span><span class="o">.</span><span class="n">set_random_seed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </code></pre></div></div>
 
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">"JavaScript syntax highlighting"</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+</code></pre></div></div>
+<h2 id="reference">Reference</h2>
+
 <p><a href="https://jekyllrb.com/">Jekyll</a>.</p>
-</div><a href="/2018/06/21/just-a-test.html">Click to read more ...</a><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Handason"/></meta><ul class="article-info__right-col menu"><li class="publish-date"><span>Jun 21, 2018</span></li>
+
+<p><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheat Sheet</a>.</p>
+</div><a href="/2018/06/21/my-workflow-for-writing-blog-posts.html">Click to read more ...</a><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Handason"/></meta><ul class="article-info__right-col menu"><li class="publish-date"><span>Jun 21, 2018</span></li>
       </ul></div>
 </article></div></div>
 

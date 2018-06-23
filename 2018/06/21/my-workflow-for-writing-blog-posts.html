@@ -1,9 +1,9 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>A New Blog! - Handason's blog</title>
-<meta name="description" content="Math equation using KaTeX!Code Snippet!!def set_seed(x):  """Set seed for both NumPy and TensorFlow.  Parameters  ----------  x : int, float    seed  """  np...">
-<link rel="canonical" href="/2018/06/21/just-a-test.html"><link rel="alternate" type="application/rss+xml" title="Handason's blog" href="/feed.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>My workflow for writing blog posts - Handason's blog</title>
+<meta name="description" content="Steps to write a post      Switch to the source branch and write a new post with markdown format and save it in the _posts directory    $ git checkout source...">
+<link rel="canonical" href="/2018/06/21/my-workflow-for-writing-blog-posts.html"><link rel="alternate" type="application/rss+xml" title="Handason's blog" href="/feed.xml">
 
 <!-- begin favicon --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
@@ -261,36 +261,74 @@
 </div><div class="page__content"><div class ="main"><div class="col-2 js-col-2"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
           <div class="col-1">
-            <article><div class="main__title"><h1>A New Blog!</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Handason"/></meta><ul class="article-info__right-col menu"><li class="publish-date"><time datetime="2018-06-21T00:00:00+08:00"
+            <article><div class="main__title"><h1>My workflow for writing blog posts</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Handason"/></meta><ul class="article-info__right-col menu"><li class="publish-date"><time datetime="2018-06-21T00:00:00+08:00"
               itemprop="datePublished">Jun 21, 2018
             </time></li>
       </ul></div>
 <div class="js-article-content"><div class="layout--article">
 
-  <div class="article-content" itemprop="articleBody"><p>Math equation using KaTeX!</p>
+  <div class="article-content" itemprop="articleBody"><h2 id="steps-to-write-a-post">Steps to write a post</h2>
+<ol>
+  <li>
+    <p>Switch to the <strong>source</strong> branch and write a new post with markdown format and save it in the <strong>_posts</strong> directory</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git checkout source
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Test it locally</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>jekyll build
+<span class="nv">$ </span>jekyll serve
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Push to github</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>rake
+</code></pre></div>    </div>
+
+    <p>As github page only support a few <a href="https://pages.github.com/versions/">whitelisted jekyll plugins</a> due to security reasons. Many
+useful plugins like <a href="https://github.com/inukshuk/jekyll-scholar">jekyll-scholad</a>, <a href="https://github.com/linjer/jekyll-katex">jekyll-katex</a> cannot be used.</p>
+
+    <p>A workaround is to build the site locally using <code class="highlighter-rouge">jekyll build</code> and push the resulting html (everything inside the <strong>_site</strong> folder) to the master branch.</p>
+
+    <p>To Automate the whole process, I modified the Rakefile from <a href="http://davidensinger.com/2013/07/automating-jekyll-deployment-to-github-pages-with-rake/">David Ensinger</a>. You can see the modified script <a href="https://github.com/handasontam/handasontam.github.io/blob/source/Rakefile">here</a>. This command will run <code class="highlighter-rouge">jekyll build</code> on the <strong>source</strong> branch and copy the evrythin in the <strong>_site</strong> directory to the <strong>master</strong> branch and push everything to github</p>
+  </li>
+</ol>
+
+<h2 id="some-demo">Some Demo</h2>
+<h3 id="math-equation-using-katex">Math equation using KaTeX!</h3>
 
 <script type="math/tex; mode=display">E(w_i,c_k,z) = -\sum_{j=1}^z w_{i,j} c_{k,j} + \Big[z\log a -\sum_{j=1}^z (w_{i,j}^2 +  c_{k,j}^2)\Big].</script>
 
-<p>Code Snippet!!</p>
+<h3 id="code-snippet">Code Snippet!</h3>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">set_seed</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-  <span class="s2">"""Set seed for both NumPy and TensorFlow.
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">set_seed</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="s">"""Set seed for both NumPy and TensorFlow.
 
   Parameters
   ----------
   x : int, float
     seed
   """</span>
-  <span class="n">np</span><span class="p">.</span><span class="nf">random</span><span class="p">.</span><span class="nf">seed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-  <span class="n">tf</span><span class="p">.</span><span class="nf">set_random_seed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="n">tf</span><span class="o">.</span><span class="n">set_random_seed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </code></pre></div></div>
 
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">"JavaScript syntax highlighting"</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+</code></pre></div></div>
+<h2 id="reference">Reference</h2>
+
 <p><a href="https://jekyllrb.com/">Jekyll</a>.</p>
+
+<p><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheat Sheet</a>.</p>
 </div>
 
-  <footer class="article-footer"><meta itemprop="dateModified" content="2018-06-21T00:00:00+08:00"><div class="article-license"><div class="license card"><div class="clearfix"><a class="octocat" href="https://github.com/handasontam/handasontam.github.io/tree/master/_posts/2018-06-21-just-a-test.md">
+  <footer class="article-footer"><meta itemprop="dateModified" content="2018-06-21T00:00:00+08:00"><div class="article-license"><div class="license card"><div class="clearfix"><a class="octocat" href="https://github.com/handasontam/handasontam.github.io/tree/master/_posts/2018-06-21-my-workflow-for-writing-blog-posts.md">
         <img alt="View on Github" src="/assets/images/octocat.jpg" />
-      </a><p><a href="https://github.com/handasontam/handasontam.github.io/tree/master/_posts/2018-06-21-just-a-test.md">View this POST on Github.</a></p><p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> license.</p><a class="license-img" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+      </a><p><a href="https://github.com/handasontam/handasontam.github.io/tree/master/_posts/2018-06-21-my-workflow-for-writing-blog-posts.md">View this POST on Github.</a></p><p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> license.</p><a class="license-img" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
       <img alt="Creative Commons License" src="/assets/images/license-cc4.png" />
     </a><p></p>
   </div>
