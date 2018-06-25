@@ -1,13 +1,18 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Blog - Handason's blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>All Posts - Handason's blog</title>
 <meta name="description" content="Handason's Blog
 ">
-<link rel="canonical" href="/"><link rel="alternate" type="application/rss+xml" title="Handason's blog" href="/feed.xml">
+<link rel="canonical" href="handasontam.github.io/"><link rel="alternate" type="application/rss+xml" title="Handason's blog" href="handasontam.github.io/feed.xml">
 
-<!-- begin favicon --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
-<meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
+<!-- begin favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <!-- end favicon --><link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity=" sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
@@ -243,7 +248,7 @@
       },
       site: {
         toc: {
-          selectors: 'h1,h2,h3'
+          selectors: 'h1,h2,h3,h4'
         }
       }
     };
@@ -253,90 +258,273 @@
   <body><div class="layout--page clearfix"><div class="page__main js-page-main"><div class="page__main-inner">
     <div></div><div class="page__header"><header class="header">
   <div class="main clearfix">
-    <div class="logo"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24">
-<style type="text/css">
-	.st0{fill:#666666;}
-</style>
-<path class="st0" d="M1.7,22.3c5.7-5.7,11.3-5.7,17,0c3.3-3.3,3.5-5.3,0.8-6c2.7,0.7,3.5-1.1,2.3-5.6s-3.3-5.2-6.3-2.1
-	c3-3,2.3-5.2-2.1-6.3S7,1.8,7.7,4.6C7,1.8,5,2.1,1.7,5.3C7.3,11,7.3,16.7,1.7,22.3"/>
-</svg><a title="Handason's Blog
+    <div class="logo"><a title="Handason's Blog
 " href="/">Handason's blog</a></div><nav>
-      <ul><li><a href="/archive.html">Archive</a></li><li><a href="/about.html">About</a></li></ul>
+      <ul><li><a href="/about.html">About</a></li></ul>
     </nav></div>
 </header>
 </div><div class="page__content"><div class ="main"><div class="col-2 js-col-2"></div>
 
           <div class="col-1">
             <article><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Handason"/></meta></div>
-<div class="js-article-content"><div class="layout--home">
-  <div class="post-list"><article><h1><a href="/2018/06/21/my-workflow-for-writing-blog-posts.html">My workflow for writing blog posts</a></h1>
-        <div class="article-content"><h2 id="steps-to-write-a-post">Steps to write a post</h2>
-<ol>
-  <li>
-    <p>Switch to the <strong>source</strong> branch and write a new post with markdown format and save it in the <strong>_posts</strong> directory</p>
+<div class="js-article-content"><div class="layout--all js-all">
+  <div class="search-box js-search-box">
+    <div class="icon-search"><i class="fas fa-search"></i></div>
+    <input type="text" />
+    <div class="button icon-clear"><i class="fas fa-times"></i></div>
+  </div><div class="site-tags js-tags">
+  <ul class="menu">
+    <li>
+      <button type="button" class="button button--secondary button--pill tag-button js-article-tag " data-encode="">
+        Show All<div class="tag-button__count">1</div>
+      </button>
+    </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="workflow">
+          <span>workflow</span><div class="tag-button__count">1</div>
+        </button>
+      </li></ul>
+</div>
+<div class="js-result layout--all__result"></div>
+</div>
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git checkout <span class="nb">source</span>
-<span class="nv">$ </span>vim _posts/2018-06-23-a-new-post.md
-<span class="c"># write a new blog post</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>Test it locally</p>
+<script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  function queryString() {
+    // This function is anonymous, is executed immediately and
+    // the return value is assigned to QueryString!
+    var i = 0, queryObj = {}, pair;
+    var queryStr = window.location.search.substring(1);
+    var queryArr = queryStr.split('&');
+    for (i = 0; i < queryArr.length; i++) {
+      pair = queryArr[i].split('=');
+      // If first entry with this name
+      if (typeof queryObj[pair[0]] === 'undefined') {
+        queryObj[pair[0]] = pair[1];
+        // If second entry with this name
+      } else if (typeof queryObj[pair[0]] === 'string') {
+        queryObj[pair[0]] = [queryObj[pair[0]], pair[1]];
+        // If third or later entry with this name
+      } else {
+        queryObj[pair[0]].push(pair[1]);
+      }
+    }
+    return queryObj;
+  }
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>jekyll build
-<span class="nv">$ </span>jekyll serve
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>Push to github</p>
+  function memorize(f) {
+    var cache = {};
+    return function () {
+      var key = Array.prototype.join.call(arguments, ',');
+      if (key in cache) return cache[key];
+      else return cache[key] = f.apply(this, arguments);
+    };
+  }
 
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>rake
-</code></pre></div>    </div>
+  function initData(json) {
+    var _data = JSON.parse(json), i, j, cur, _tags;
+    Object.keys(_data).forEach(function(year) {
+      for (i = 0; i < _data[year].length; i++) {
+        cur = _data[year][i], _tags = cur.tags;
+        cur.title = window.decodeUrl(cur.title);
+        cur.url = window.decodeUrl(cur.url);
+        if (_tags && _tags.length > 0) {
+          for (j = 0; j < _tags.length; j++) {
+            _tags[j] = window.decodeUrl(_tags[j]);
+          }
+        }
+      }
+    });
+    return _data;
+  }
 
-    <p>As github page only support a few <a href="https://pages.github.com/versions/">whitelisted jekyll plugins</a> due to security reasons. Many
-useful plugins like <a href="https://github.com/inukshuk/jekyll-scholar">jekyll-scholad</a>, <a href="https://github.com/linjer/jekyll-katex">jekyll-katex</a> cannot be used.</p>
+  var setUrlQuery = (function() {
+    var baseUrl =  window.location.href.split('?')[0];
+    return function(query) {
+      if (typeof query === 'string') {
+        window.history.replaceState(null, '', baseUrl + query);
+      } else {
+        window.history.replaceState(null, '', baseUrl);
+      }
+    };
+  })();
 
-    <p>A workaround is to build the site locally using <code class="highlighter-rouge">jekyll build</code> and push the resulting html (everything inside the <strong>_site</strong> folder) to the master branch.</p>
+  var data = initData('{"2018":[{"key":"1","title":"My+workflow+for+writing+blog+posts","tags":["workflow"],"url":"%2F2018%2F06%2F21%2Fmy-workflow-for-writing-blog-posts.html","date":"Jun 21"}]}');
 
-    <p>To Automate the whole process, I modified the Rakefile from <a href="http://davidensinger.com/2013/07/automating-jekyll-deployment-to-github-pages-with-rake/">David Ensinger</a>. You can see the modified script <a href="https://github.com/handasontam/handasontam.github.io/blob/source/Rakefile">here</a>. This command will run <code class="highlighter-rouge">jekyll build</code> on the <strong>source</strong> branch and copy everythin in the <strong>_site</strong> directory to the <strong>master</strong> branch and push everything to github</p>
-  </li>
-</ol>
+  var searchByTag = memorize(function(tag) {
+    var i, j, cur, _tags, _tag, _data = {};
+    Object.keys(data).forEach(function(year) {
+      for (i = 0; i < data[year].length; i++) {
+        cur = data[year][i], _tags = cur.tags;
+        if (_tags && _tags.length > 0) {
+          for (j = 0; j < _tags.length; j++) {
+            _tag = _tags[j];
+            if (_tag === tag) {
+              if (!_data[year]) {
+                _data[year] = [];
+              }
+              _data[year].push(cur);
+              break;
+            }
+          }
+        }
+      }
+    });
+    return _data;
+  });
 
-<h2 id="some-demo">Some Demo</h2>
-<h3 id="math-equation-using-katex">Math equation using KaTeX!</h3>
+  var searchByQuery = function(query) {
+    var i, cur, _title, _data = { _: [] };
+    Object.keys(data).forEach(function(year) {
+      for (i = 0; i < data[year].length; i++) {
+        cur = data[year][i], _title = cur.title;
+        if (_title.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
+          _data._.push(cur);
+        }
+      }
+    });
+    return _data;
+  };
 
-<script type="math/tex; mode=display">E(w_i,c_k,z) = -\sum_{j=1}^z w_{i,j} c_{k,j} + \Big[z\log a -\sum_{j=1}^z (w_{i,j}^2 +  c_{k,j}^2)\Big].</script>
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $root = $('.js-all');
+    var $searchBox = $('.js-search-box');
+    var $searchInput = $searchBox.children('input');
+    var $searchClear = $searchBox.children('.icon-clear');
+    var $tags = $('.js-tags');
+    var $articleTags = $('.js-article-tag');
+    var $tagShowAll = $('.js-tag-show-all');
+    var $result = $('.js-result');
+    var $lastFocusButton = null;
 
-<h3 id="code-snippet">Code Snippet!</h3>
+    function addClass(dom, className) {
+      dom.hasClass(className) || dom.addClass(className);
+    }
+    function removeClass(dom, className) {
+      dom.hasClass(className) && dom.removeClass(className);
+    }
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">set_seed</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-  <span class="s">"""Set seed for both NumPy and TensorFlow.
+    var renderHeading = memorize(function (year) {
+      return $('<h2 class="year">' + year + '</h2>');
+    });
+    var renderItem = memorize(function (key, title, date, url) {
+      return $('<li><span class="date">' + date + '</span><a class="link" href="' + url + '">' + title + '</a></li>');
+    });
+    function render(data) {
+      var $dom = $('<div></div>'), $section, $ul, i, cur;
+      Object.keys(data).sort(function(a, b) {
+        return b.localeCompare(a);
+      }).forEach(function(year) {
+        $section = $('<section></section>'), $ul = $('<ul></ul>');
+        (year === '_') || $section.append(renderHeading(year));
+        for (i = 0; i < data[year].length; i++) {
+          cur = data[year][i];
+          $ul.append(renderItem(cur.key, cur.title, cur.date, cur.url, cur.tags));
+        }
+        $dom.append($section.append($ul));
+      });
+      return $dom;
+    }
 
-  Parameters
-  ----------
-  x : int, float
-    seed
-  """</span>
-  <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-  <span class="n">tf</span><span class="o">.</span><span class="n">set_random_seed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</code></pre></div></div>
+    function searchButtonsByTag(_tag/*raw tag*/) {
+      if (!_tag) {
+        return $tagShowAll;
+      }
+      var _buttons = $articleTags.filter('[data-encode="' + _tag + '"]');
+      if (_buttons.length === 0) {
+        return $tagShowAll;
+      }
+      return _buttons;
+    }
+    function buttonFoucs(target) {
+      if (target) {
+        addClass(target, 'focus');
+        $lastFocusButton && !$lastFocusButton.is(target) && removeClass($lastFocusButton, 'focus');
+        $lastFocusButton = target;
+      }
+    }
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">"JavaScript syntax highlighting"</span><span class="p">;</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
-</code></pre></div></div>
-<h2 id="reference">Reference</h2>
+    function setIsSearch() {
+      addClass($root, 'search');
+    }
+    function setNotSearch() {
+      removeClass($root, 'search');
+    }
+    function setIsEmpty() {
+      removeClass($searchBox, 'not-empty');
+    }
+    function setNotEmpty() {
+      addClass($searchBox, 'not-empty');
+    }
+    function setSearchBoxVal(val) {
+      ($searchInput.val() === val) || $searchInput.val(val);
+    }
+    function clearSearchBox() {
+      setSearchBoxVal(''); queryInput('');
+    }
 
-<p><a href="https://jekyllrb.com/">Jekyll</a>.</p>
+    function showAll() {
+      setNotSearch(); setIsEmpty(); buttonFoucs($tagShowAll); setUrlQuery();
+      $result.html(render(data));
+    }
+    function tagSelect(tag/*decode tag*/, target) {
+      var _tag;
+      if (tag === '' || tag === undefined) {
+        showAll();
+      } else {
+        $result.html(render(searchByTag(tag)));
+      }
+      if (target) {
+        buttonFoucs(target);
+        _tag = target.attr('data-encode');
+        if (_tag === '' || typeof _tag !== 'string') {
+          setUrlQuery();
+        } else {
+          setUrlQuery('?tag=' + _tag);
+        }
+      }
+    }
+    function queryInput(query) {
+      if (query === '' || typeof query !== 'string') {
+        showAll();
+      } else {
+        $result.html(render(searchByQuery(query))); setIsSearch(); setNotEmpty(); setUrlQuery('?q=' + query);
 
-<p><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheat Sheet</a>.</p>
-</div><a href="/2018/06/21/my-workflow-for-writing-blog-posts.html">Click to read more ...</a><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Handason"/></meta><ul class="article-info__right-col menu"><li class="publish-date"><span>Jun 21, 2018</span></li>
-      </ul></div>
-</article></div></div>
+      }
+    }
 
-<script>/*(function () {
+    (function() {
+      $articleTags.removeClass('inactive');
+      var query = queryString(), _tag = query.tag, _q = query.q;
+      if (_tag !== undefined) {
+        query.tag === undefined || (_tag = query.tag);
+        tagSelect(window.decodeUrl(_tag));
+        buttonFoucs(searchButtonsByTag(_tag));
+      } else if (_q !== undefined) {
+        _q = window.decodeUrl(_q);
+        queryInput(_q); setSearchBoxVal(_q);
+      } else {
+        showAll();
+      }
+    })();
 
-})();*/</script></div></article>
+    $tags.on('click', 'button', function() {
+      tagSelect($(this).children('span').text(), $(this));
+    });
+
+    $searchInput.on('input', window.throttle(function() {
+      queryInput($(this).val());
+    }, 400));
+    $searchInput.on('focus', function() {
+      addClass($(this), 'focus');
+    });
+    $searchInput.on('blur', function() {
+      removeClass($(this), 'focus');
+    });
+    $searchClear.on('click', function() {
+      clearSearchBox();
+    });
+  });
+})();
+</script></div></article>
           </div></div></div>
 
       <div class="page__footer">
@@ -344,7 +532,7 @@ useful plugins like <a href="https://github.com/inukshuk/jekyll-scholar">jekyll-
   <div class="main">
     <aside><div class="follow-me">
   <ul class="menu menu--nowrap menu--center" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Handason"><link itemprop="url" href="/"><li title="Send me Email.">
+    <meta itemprop="name" content="Handason"><link itemprop="url" href="handasontam.github.io/"><li title="Send me Email.">
       <a class="button button--circle mail-button" itemprop="sameAs" href="mailto:handasontam@gmail.com" target="_blank">
         <i class="fas fa-envelope"></i>
       </a><li title="Follow me on Github.">
