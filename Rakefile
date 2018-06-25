@@ -32,7 +32,7 @@ desc "Deploy _site/ to #{production_branch} branch"
 task :deploy do
   Dir.mktmpdir do |tmp|
     puts "\n## Moving #{source_branch} branch _site contents to tmp folder"
-    status = system("mv _site/* #{tmp}")
+    status = system("mv _site/* README.md #{tmp}")
     puts status ? "Success" : "Failed"
     puts "\n## Switching to #{production_branch} branch"
     status = system("git checkout #{production_branch}")
