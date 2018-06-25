@@ -1,11 +1,5 @@
----
-layout: article
-title: My workflow for writing blog posts
-tags:
-  - workflow
-chart: true
-mermaid: true
----
+See [https://handasontam.github.io/2018/06/21/my-workflow-for-writing-blog-posts.html]
+Source can be found under the **source** branch.
 
 ## Steps to write a post
 1. Switch to the **source** branch and write a new post with markdown format and save it in the **_posts** directory
