@@ -1,6 +1,7 @@
 ---
 layout: article
 title: My workflow for writing blog posts
+key: 20180621
 tags:
   - workflow
 chart: true

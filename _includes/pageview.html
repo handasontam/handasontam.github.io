@@ -6,7 +6,7 @@
 
 {%- if page.layout == "home" -%}
 
-  {%- if jekyll.environment != "development" -%}
+  {%- if site.environment != "dev" -%}
     {%- include pageview-providers/leancloud/home.html -%}
   {%- endif -%}
 
@@ -14,8 +14,8 @@
 {%- elsif page.layout == "article" -%}
   {%- if _pageview -%}
 
-    {%- if jekyll.environment != "development" and
-      jekyll.environment != "beta" -%}
+    {%- if site.environment != "dev" and
+      site.environment != "beta" -%}
       {%- include pageview-providers/leancloud/post.html -%}
     {%- endif -%}
 
