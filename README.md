@@ -1,75 +1,46 @@
-# [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
+---
+layout: article
+title: My workflow for writing blog posts
+tags:
+  - workflow
+chart: true
+mermaid: true
+---
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-text-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/releases)
-[![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
-[![Travis](https://img.shields.io/travis/kitian616/jekyll-TeXt-theme.svg)](https://travis-ci.org/kitian616/jekyll-TeXt-theme)
+## Steps to write a post
+1. Switch to the **source** branch and write a new post with markdown format and save it in the **_posts** directory
 
-![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png)
+   ```shell
+   $ git checkout source
+   $ vim _posts/2018-06-23-a-new-post.md
+   # write a new blog post
+   ```
 
-![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)
+2. Test it locally
 
-TeXt is a Jekyll theme for personal site, blog, project, documentation and so on. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+   ```shell
+   $ jekyll build
+   $ jekyll serve
+   ```
 
-[中文文档](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-zh.md)
+3. Push to github
 
-## Features
+   ```shell
+   $ rake
+   ```
 
-- Responsive
-- Paginate ([jekyll-paginate](https://github.com/jekyll/jekyll-paginate))
-- Table of contents
-- Tag
-- Search
-- Page views ([LeanCloud](https://leancloud.cn/))
-- Emoji ([Jemoji](https://github.com/jekyll/jemoji))
-- Comment ([Disqus](https://disqus.com/))
-- Google Analytics
-- Contact information (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)
-- Semantic HTML
-- Color Theme
-- Mathematical formula ([MathJax](https://www.mathjax.org/))
-- Flowchart, Sequence diagram, Gantt diagram ([mermaid](https://mermaidjs.github.io/))
-- Line Chart, Bar Chart, Radar Chart, Pie Chart ([chartjs](http://www.chartjs.org/))
-- RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed))
-- Multi-language support(English, Simplified Chinese, Traditional Chinese)
+   As github page only support a few [whitelisted jekyll plugins](https://pages.github.com/versions/) due to security reasons. Many
+useful plugins like [jekyll-scholad](https://github.com/inukshuk/jekyll-scholar), [jekyll-katex](https://github.com/linjer/jekyll-katex) cannot be used.
 
-## Color Themes
+   A workaround is to build the site locally using ```jekyll build``` and push the resulting html (everything inside the **\_site** folder) to the master branch.
 
-You can choose these 6 built-in color themes below:
+   To Automate the whole process, I modified the Rakefile from [David Ensinger](http://davidensinger.com/2013/07/automating-jekyll-deployment-to-github-pages-with-rake/). You can see the modified script [here](https://github.com/handasontam/handasontam.github.io/blob/source/Rakefile). This command will run ```jekyll build``` on the **source** branch and copy everythin in the **_site** directory to the **master** branch and push everything to github
 
-| `default` | `dark` | `forest` |
-| --- |  --- | --- |
-| ![default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_default.png) | ![dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_dark.png) | ![forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_forest.png) |
 
-| `ocean` | `chocolate` | `orange` |
-| --- |  --- | --- |
-| ![ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_ocean.png) | ![chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_chocolate.png) | ![orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_orange.png) |
+## Reference
 
-## Documentation
+[Jekyll](https://jekyllrb.com/).
 
-### Start
+[Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-- [Quick Start](https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start)
-
-### Customization
-
-- [Configuration](https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration)
-- [Navigation](https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation)
-- [Layouts](https://tianqi.name/jekyll-TeXt-theme/docs/en/layouts)
-- [Logo and Favicon](https://tianqi.name/jekyll-TeXt-theme/docs/en/logo-and-favicon)
-
-### Content
-
-- [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/docs/en/writing-posts)
-- [Markdown Enhancements](https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements)
-- [Additional styles](https://tianqi.name/jekyll-TeXt-theme/docs/en/additional-styles)
-
-## Demo Pages
-
-| Name | Description |
-| --- | --- |
-| [Home](https://tianqi.name/jekyll-TeXt-theme/) | Home page with posts list |
-| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | You can filter tags and search here |
-
-## License
-
-TeXt Theme is [MIT licensed](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE).
+[TeXt Theme Docs](https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start).
