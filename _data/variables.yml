@@ -11,7 +11,7 @@ default:
   mermaid: false
   chart: false
   toc:
-    selectors: 'h1,h2,h3'
+    selectors: 'h1,h2,h3,h4'
   show_title: true
   show_header: true
   full_width: false
