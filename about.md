@@ -8,5 +8,4 @@ titles:
 key: page-about
 ---
 
-I'm interested in Bayesian ML, Generative Model, Information Theory, Probabilistic Graphical Model, Reinforcement Learning (in Alphabetical order) and many more.
 
