@@ -1,5 +1,10 @@
 See [https://handasontam.github.io/2018/06/21/my-workflow-for-writing-blog-posts.html]
 Source can be found under the **source** branch.
+## Dependencies
+   https://jekyllrb.com/docs/installation/
+   ```shell
+   $ bundle install
+   ```
 
 ## Steps to write a post
 1. Switch to the **source** branch and write a new post with markdown format and save it in the **_posts** directory
@@ -13,8 +18,8 @@ Source can be found under the **source** branch.
 2. Test it locally
 
    ```shell
-   $ jekyll build
-   $ jekyll serve
+   $ bundle exec jekyll build
+   $ bundle exec jekyll serve
    ```
 
 3. Push to github
