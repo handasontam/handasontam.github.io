@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fugitive #1: Tracking the Fugitive with Graph-Based Deduction"
-date: 2024-10-02 15:09:00
+date: 2024-10-08 15:09:00
 description: Tracking the Fugitive with Graph-Based Deduction
 tags: board-game data-structure algorithm game-theory reinforcement-learning fugitive
 categories: sample-posts
@@ -25,7 +25,6 @@ Fugitive is a two-player card game where one player takes on the role of a Fugit
 Players take turns, with the Fugitive starting at hideout 0. The Fugitive establishes hideouts by playing cards face-down in ascending order. Each new hideout must be numbered within 1, 2, or 3 of the previous one. To cover larger distances, the Fugitive can "Sprint" by placing additional cards underneath a hideout. These sprint cards have values (+1 or +2) that allow the Fugitive to jump further than the usual 3-card limit.
 
 The Marshal attempts to guess and reveal these hideouts. The game's tension builds as the Fugitive tries to outmaneuver the Marshal, using special "Sprint" moves to cover larger distances, while the Marshal uses deduction and strategy to close in on their target.
-
 
 ### Research Questions
 
@@ -62,7 +61,7 @@ This approach will also be useful when we implement the action mask in the reinf
 
 As the game progresses, the Marshal must keep track of the possible range for each hideout and update this information based on guesses, revealed cards, and drawn cards.
 
-Based on the above considerations, the official board game provided a Marshal's notepad ([example](https://apps.apple.com/hk/app/fugitive-notepad/id1135595567)), which consists of a grid of 41 numbers, and the marshal can mark the number that has been known not to be a hideout. 
+Based on the above considerations, the official board game provided a Marshal's notepad ([example](https://apps.apple.com/hk/app/fugitive-notepad/id1135595567)), which consists of a grid of 41 numbers, and the marshal can mark the number that has been known not to be a hideout.
 This helps the marshal to keep track of the potential hideouts.
 However, we can do much better than this with a more sophisticated data structure.
 
@@ -87,6 +86,7 @@ While a traditional notepad approach (crossing out numbers from 1-42) is intuiti
 Let's break down the key components of our graph-based approach:
 
 1. **Nodes**: Each node in our graph represents a potential hideout location. It's defined by two values:
+
    - Depth: The hideout's position in the sequence (0 for start, 1 for first hideout, etc.)
    - Value: The numeric location (0-42)
 
@@ -103,6 +103,7 @@ Let's walk through how we construct and update this graph as the game progresses
 #### 1. Initialization
 
 We start with a single node (0, 0), representing the known starting point.
+
 ```python
 self.graph = nx.DiGraph()
 self.graph.add_node((0, 0))
@@ -114,6 +115,7 @@ self.n_hideouts = 1
 #### 2. Adding New Hideouts
 
 When the Fugitive places a new hideout, we expand our graph:
+
 ```python
 def add_new_hideout(self, n_sprint: int, filtered_vals: List[int]) -> None:
     prev_depth = self.n_hideouts - 1
@@ -133,6 +135,7 @@ def add_new_hideout(self, n_sprint: int, filtered_vals: List[int]) -> None:
 ```
 
 This method considers:
+
 - The previous hideout's possible locations
 - The number of sprint cards played
 - Any values we know can't be hideouts (filtered_vals)
@@ -156,16 +159,17 @@ This removes any nodes that we now know can't be hideouts and updates our `hideo
 #### 4. Revealed Hideouts
 
 When a hideout is revealed (either through a correct guess or the Fugitive reaching location 42), we update our graph to reflect this certain information:
+
 ```python
 def hideout_revealed(self, depth: int, hideout: int) -> None:
     # Remove all nodes at the given depth except the revealed hideout
     nodes_to_remove = [(d, v) for d, v in self.graph.nodes() if d == depth and v != hideout]
     self.graph.remove_nodes_from(nodes_to_remove)
-    
+
     # Update hideouts_range for this depth
     self.hideouts_range[depth, :] = 0
     self.hideouts_range[depth, hideout] = 1
-    
+
     # Remove unreachable nodes
     self._remove_unreachable_nodes()
 ```
@@ -175,7 +179,8 @@ def hideout_revealed(self, depth: int, hideout: int) -> None:
 
 After each update, we call `_remove_unreachable_nodes()` to ensure our graph remains consistent:
 
-This method performs two crucial cleanup operations (Assuming depth is zero indexed): 
+This method performs two crucial cleanup operations (Assuming depth is zero indexed):
+
 1. Removing nodes unreachable from root. This requires a linear scan of the graph from depth 1 to depth n_hideouts-1 and remove the nodes that are not reachable from the previous depth (i.e. nodes with in-degree of 0).
 2. Removing nodes unreachable to the latest hideout (leaf at depth n_hideouts). This requires a linear scan of the graph from depth n_hideouts-2 to depth 0 and remove the nodes that are not reachable to the next hideout (i.e. nodes with out-degree of 0).
 
@@ -189,7 +194,7 @@ def _remove_unreachable_nodes(self):
             if self.graph.in_degree(node) == 0:
                 self.graph.remove_node(node)
                 self.hideouts_range[node[0], node[1]] = 0
-    
+
     # Remove nodes unreachable to the leaf at depth n_hideouts
     for depth in range(self.n_hideouts-2, 0, -1):
         nodes_at_depth = [node for node in self.graph.nodes() if node[0] == depth]

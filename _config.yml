@@ -4,7 +4,7 @@
 
 title: Handason's Blog # the website title (if blank, full name will be used instead)
 first_name: Da Sun Handason
-middle_name: 
+middle_name:
 last_name: Tam
 email: handasontam@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -81,7 +81,7 @@ flickr_id: # your flickr id
 github_username: # your GitHub user name
 gitlab_username: # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
-inspirehep_id:  # Inspire HEP author ID
+inspirehep_id: # Inspire HEP author ID
 instagram_id: # your instagram id
 kaggle_id: # your kaggle id
 keybase_username: # your keybase user name
@@ -114,7 +114,6 @@ zotero_username: # your zotero username
 
 contact_note: >
 # You can even add a little note about which of these is the best way to reach you.
-
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
 # -----------------------------------------------------------------------------
@@ -133,8 +132,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name:  # blog_name will be displayed in your blog page
-blog_description: 
+blog_name: # blog_name will be displayed in your blog page
+blog_description:
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
