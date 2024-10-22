@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fugitive #1: Tracking the Fugitive with Graph-Based Deduction"
-date: 2024-09-20 15:09:00
+date: 2024-10-02 15:09:00
 description: Tracking the Fugitive with Graph-Based Deduction
 tags: board-game data-structure algorithm game-theory reinforcement-learning fugitive
 categories: sample-posts
